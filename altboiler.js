@@ -18,6 +18,18 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+    altboiler.config({
+      action: altboiler.getTemplate('loader.html', Assets),
+      css: Assets.getText('loader.css'),
+      js: Assets.getText('loader.js'),
+      onLoad: function (next) {
+        function disappear () {
+          document.getElementsByClassName('altboiler_loader')[0]
+            .style.opacity = 0
+        }
+        setTimeout(disappear, 4000)
+        setTimeout(next, 4200)
+      }
+    })
   });
 }
