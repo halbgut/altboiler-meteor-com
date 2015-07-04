@@ -1,8 +1,8 @@
 function styleBubble (elem) {
   elem.style.left = Math.round(Math.random() * 100) + '%'
   elem.style.top = '-100px'
-  elem.style.width = '0'
-  elem.style.height = '0'
+  elem.style.width = '5px'
+  elem.style.height = '5px'
 }
 
 function createBubble (wrapper) {
