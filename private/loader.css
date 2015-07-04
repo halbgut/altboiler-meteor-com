@@ -14,7 +14,7 @@
   opacity: 1;
   font-family: Helvetica, sans-serif;
   color: #fff;
-  background-color: #aaa;
+  background-color: #333;
   transition: opacity .2s;
 }
 
@@ -22,6 +22,11 @@
 .altboiler_loader__text {
   width: 100%;
   font-weight: 100;
+  color: #ddd;
+}
+
+.altboiler_loader__text a {
+  color: inherit;
 }
 
 .altboiler_loader__bubble {

@@ -6,7 +6,6 @@ function styleBubble (elem) {
 }
 
 function createBubble (wrapper) {
-  console.log('bubble')
   var newBubble
   wrapper = document.querySelector(wrapper)
   if(!wrapper) return
@@ -23,3 +22,7 @@ window.boilerplate_interval = window.setInterval(
   ),
   200
 )
+
+setTimeout(function () {
+  window.altboiler_hasTimePassed = true
+},4000)

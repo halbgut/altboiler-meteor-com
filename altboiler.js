@@ -23,16 +23,18 @@ if (Meteor.isServer) {
       css: Assets.getText('loader.css'),
       js: Assets.getText('loader.js'),
       onLoad: function (next) {
-        function disappear () {
-          document.getElementsByClassName('altboiler_loader')[0]
-            .style.opacity = 0
+        function cleanUp () {
+          if(!window.altboiler_hasTimePassed) {
+            return setTimeout(cleanUp, 0)
+          }
+          document.getElementsByClassName('altboiler_loader')[0].style.opacity = 0
+          removeInterval()
+          setTimeout(next, 200)
         }
         function removeInterval () {
           clearInterval(window.boilerplate_interval)
         }
-        setTimeout(disappear, 4000)
-        setTimeout(removeInterval, 4000)
-        setTimeout(next, 4200)
+        setTimeout(cleanUp, 0)
       }
     })
   });
