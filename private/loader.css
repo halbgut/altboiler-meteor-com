@@ -10,18 +10,18 @@
 }
 
 .altboiler_loader {
+  padding: 1rem;
   opacity: 1;
   font-family: Helvetica, sans-serif;
   color: #fff;
-  background-color: #ccc;
+  background-color: #aaa;
   transition: opacity .2s;
 }
 
-.altboiler_loader__title {
+.altboiler_loader__title,
+.altboiler_loader__text {
   width: 100%;
-  line-height: 100vh;
   font-weight: 100;
-  text-align: center;
 }
 
 .altboiler_loader__bubble {
@@ -31,7 +31,7 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color: #fff;
+  border: #fff solid 2px;
   color: transparent;
-  transition: top ease-in 4s;
+  transition: all ease-in 4s;
 }

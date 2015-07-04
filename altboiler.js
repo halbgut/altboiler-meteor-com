@@ -27,7 +27,11 @@ if (Meteor.isServer) {
           document.getElementsByClassName('altboiler_loader')[0]
             .style.opacity = 0
         }
+        function removeInterval () {
+          clearInterval(window.boilerplate_interval)
+        }
         setTimeout(disappear, 4000)
+        setTimeout(removeInterval, 4000)
         setTimeout(next, 4200)
       }
     })
