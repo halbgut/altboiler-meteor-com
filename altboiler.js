@@ -19,7 +19,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     altboiler.config({
-      action: altboiler.getTemplate('loader.html', Assets),
+      action: Assets.getText('loader.html'),
       css: Assets.getText('loader.css'),
       js: Assets.getText('loader.js'),
       onLoad: function (next) {
