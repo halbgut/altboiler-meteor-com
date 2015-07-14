@@ -1,0 +1,8 @@
+<template name="posts_list">
+  {{ #each posts }}
+    <article class="post post--teaser">
+      <h2 class="post__title post--teaser__title">{{ title }}</h2>
+      <p class="post__text post--teaser__text">{{ teaser }}</p>
+    </article>
+  {{ /each }}
+</template>
