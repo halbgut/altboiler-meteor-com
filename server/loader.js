@@ -1,3 +1,6 @@
+SSR.compileTemplate('content', Assets.getText('loader/content.html'))
 altboiler.config({
-  content: Assets.getText('loader/content.html'),
+  action: Assets.getText('loader/loader.html'),
+  content: SSR.render('content'),
+  css: Assets.getText('loader/styles.css')
 })

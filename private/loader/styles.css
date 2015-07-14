@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: 100;
+  background: hsl(0,0%,90%);
+  color: hsl(0,0%,10%);
+}
+
+h1 {
+  font: inherit;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.header {
+  z-index: -1;
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 30rem;
+  display: block;
+  background: hsl(0,0%,10%);
+  color: hsl(0,0%,90%);
+}
+
+.header:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -2rem;
+  left: -2rem;
+  width: 120vw;
+  height: 4rem;
+  background: hsl(0,0%,90%);
+  transform: rotate(3deg);
+}
+
+.header__title {
+  margin: 0;
+  padding: 2rem;
+}
+
+.header__sumary {
+  line-height: 2.2rem;
+  margin: 0 2rem 7rem 2rem;
+}
