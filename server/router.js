@@ -1,24 +1,19 @@
-function isRoute (url, path) {
-  return (
-    (
-      new RegExp(
-        path
-          .split('/')
-          .map(function (splinter) {
-            return splinter[0] == ':' ? '[^\\/\\?#]*' : splinter
-          })
-            .join('\\/')
-      )
-    )
-      .test(url)
-  )
+if(Headers.find().count() < 1) {
+  Headers.insert({
+    route: '/',
+    html: Assets.getText('loader/startHeader.html')
+  })
+
+  Headers.insert({
+    route: '/blog/:post',
+    html: Assets.getText('loader/postHeader.html')
+  })
 }
 
 WebApp.rawConnectHandlers.use(Meteor.bindEnvironment(function (req, res, next) {
-  if(isRoute(req.originalUrl, '/blog/:post')) {
-    altboiler.set({
-      content: Assets.getText('loader/post.html')
-    })
-  }
+  if(!req.originalUrl) return
+  altboiler.set({
+    content: getHeader(req.originalUrl) + Assets.getText('loader/main.html')
+  })
   next()
 }))
