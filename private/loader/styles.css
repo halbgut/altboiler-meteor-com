@@ -29,10 +29,10 @@ h1 {
   content: '';
   position: absolute;
   z-index: 1;
-  bottom: -2rem;
-  left: -2rem;
-  width: 120vw;
-  height: 4rem;
+  bottom: -3vw;
+  left: -2vw;
+  width: 104vw;
+  height: 6vw;
   background: hsl(0,0%,90%);
   transform: rotate(3deg);
 }

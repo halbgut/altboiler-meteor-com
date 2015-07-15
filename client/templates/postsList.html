@@ -1,0 +1,12 @@
+<template name="postsList">
+  {{ #each posts }}
+    <article class="post post--teaser">
+      <a href="/blog/{{ URIEncode title }}" class="post__link">
+        <h2 class="post__title post--teaser__title">{{ title }}</h2>
+      </a>
+      <a href="/blog/{{ URIEncode title }}" class="post__link">
+        <p class="post__text post--teaser__text">{{ teaser }}</p>
+      </a>
+    </article>
+  {{ /each }}
+</template>

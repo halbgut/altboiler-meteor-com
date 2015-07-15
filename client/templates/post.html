@@ -1,0 +1,9 @@
+<template name="post">
+  <div class="post">
+    <a href="/blog/{{ URIEncode title }}" class="post__link">
+      <h2 class="post__title">{{ title }}</h2>
+    </a>
+    <p class="post__text">{{ teaser }}</p>
+    <p class="post__text">{{ body }}</p>
+  </div>
+</template>
