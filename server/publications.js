@@ -9,3 +9,7 @@ Meteor.publish('singlePost', function (postTitle) {
     fields: { title: 1, teaser: 1, body: 1 }
   })
 })
+
+Meteor.publish('header', function (url) {
+  return Headers.find({html: getHeader(url)})
+})

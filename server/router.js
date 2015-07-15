@@ -1,14 +1,16 @@
-if(Headers.find().count() < 1) {
-  Headers.insert({
+Headers.upsert({route: '/'}, {
+  $set: {
     route: '/',
     html: Assets.getText('loader/startHeader.html')
-  })
+  }
+})
 
-  Headers.insert({
+Headers.upsert({route: '/blog/:post'}, {
+  $set: {
     route: '/blog/:post',
     html: Assets.getText('loader/postHeader.html')
-  })
-}
+  }
+})
 
 WebApp.rawConnectHandlers.use(Meteor.bindEnvironment(function (req, res, next) {
   if(!req.originalUrl) return
