@@ -12,10 +12,13 @@ Headers.upsert({route: '/blog/:post'}, {
   }
 })
 
+SSR.compileTemplate('loaderMain', Assets.getText('loader/main.html'))
+
+// Because FlowRouter has no server-side routes, I have to do them myself
 WebApp.rawConnectHandlers.use(Meteor.bindEnvironment(function (req, res, next) {
   if(!req.originalUrl) return
   altboiler.set({
-    content: getHeader(req.originalUrl) + Assets.getText('loader/main.html')
+    content: SSR.render('loaderMain', {header: getHeader(req.originalUrl)})
   })
   next()
 }))

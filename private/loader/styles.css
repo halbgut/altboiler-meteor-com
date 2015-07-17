@@ -1,7 +1,10 @@
+html {
+  font-size: 15px;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-size: 20px;
   font-family: helvetica;
   font-weight: 100;
   background: hsl(0,0%,90%);
@@ -10,8 +13,51 @@ body {
 
 h1 {
   font: inherit;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
+}
+
+.loader {
+  position: relative;
+  left: 50%;
+  top: 4rem;
+  margin-left: -2rem;
+  width: 4rem;
+  height: 1rem;
+  color: transparent;
+  background-color: hsl(0,0%,10%);
+  -webkit-animation: spinner 1.5s linear infinite;
+  -o-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4rem;
+  height: 1rem;
+  background-color: hsl(0,0%,10%);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .main {
@@ -23,10 +69,10 @@ h1 {
   position: relative;
   overflow: hidden;
   width: 100vw;
-  min-height: 30rem;
+  min-height: 6rem;
   display: block;
   background: hsl(0,0%,10%);
-  color: hsl(0,0%,90%);
+  color: hsl(0,0%,100%);
 }
 
 .header:after {
@@ -43,7 +89,7 @@ h1 {
 
 .header__title {
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 2rem 10vw 2rem;
 }
 
 .header__titleLink {
@@ -54,6 +100,12 @@ h1 {
 }
 
 .header__sumary {
-  line-height: 2.2rem;
-  margin: 0 2rem 7rem 2rem;
+  line-height: 1.8rem;
+  margin: 0 1rem 7rem 2rem;
+}
+
+@media all and (min-width: 500px) {
+  body {
+    font-size: 18px;
+  }
 }
