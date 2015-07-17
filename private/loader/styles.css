@@ -69,6 +69,7 @@ h1 {
   position: relative;
   overflow: hidden;
   width: 100vw;
+  padding-bottom: 2vw;
   min-height: 6rem;
   display: block;
   background: hsl(0,0%,10%);
@@ -89,7 +90,7 @@ h1 {
 
 .header__title {
   margin: 0;
-  padding: 2rem 2rem 10vw 2rem;
+  padding: 2rem;
 }
 
 .header__titleLink {
