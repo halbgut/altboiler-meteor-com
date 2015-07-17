@@ -1,8 +1,7 @@
 altboiler.config({
   action: Assets.getText('loader/loader.html'),
   content: Assets.getText('loader/main.html'),
-  css: Assets.getText('loader/styles.css'),
-  showLoader: false
+  css: Assets.getText('loader/styles.css')
 })
 
 // Add an artificial delay
