@@ -105,6 +105,26 @@ h1 {
   margin: 0 1rem 7rem 2rem;
 }
 
+.header__links {
+  padding: 1rem;
+}
+
+.header__link:first-child:after {
+  content: '|';
+  padding: 0 1rem;
+}
+
+.header__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.header__link:hover,
+.header__link:active {
+  text-decoration: underline;
+}
+
 @media all and (min-width: 500px) {
   body {
     font-size: 18px;

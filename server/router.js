@@ -12,6 +12,20 @@ Headers.upsert({route: '/blog/:post'}, {
   }
 })
 
+Headers.upsert({route: '/without'}, {
+  $set: {
+    route: '/without',
+    html: Assets.getText('loader/startHeader.html')
+  }
+})
+
+Headers.upsert({route: '/without/blog/:post'}, {
+  $set: {
+    route: '/without/blog/:post',
+    html: Assets.getText('loader/postHeader.html')
+  }
+})
+
 SSR.compileTemplate('loaderMain', Assets.getText('loader/main.html'))
 
 // Because FlowRouter has no server-side routes, I have to do them myself
