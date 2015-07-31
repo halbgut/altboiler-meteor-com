@@ -1,3 +1,4 @@
+altboiler.configuration.css = []
 altboiler.config({
   action: '',
   content: Assets.getText('loader/main.html'),
