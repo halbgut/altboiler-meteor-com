@@ -5,10 +5,11 @@ altboiler.config({
   css: Assets.getText('loader/styles.css')
 })
 
-WebApp.connectHandlers.use(function (req, res, next) {
-  if(req.url.indexof('/without') == 0) {
+WebApp.rawConnectHandlers.use(function (req, res, next) {
+  if(req.url.indexOf('/without') == 0) {
     altboiler.set({
       showLoader: false
     })
   }
+  next()
 })
