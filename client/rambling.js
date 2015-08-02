@@ -1,10 +1,66 @@
-function ramble () {
-  eval(
-    atob(
-      stuff[Math.round(
-        Math.random() * 10)]))
+ramble = function ramble () {
+  stuff[Math.round(Math.random() * 10)]()
 }
 
-var stuff = ['O3ZhciBzdHlsZXMgPSAnY29sb3I6IGdyZWVuOyBmb250LXN0eWxlOiBpdGFsaWM7Jztjb25zb2xlLmluZm8oJ0Nvb2wgZmVhdHVyZXMgb2YgdGhlICVjY29uc29sZScsICdmb250LXN0eWxlOiBpdGFsaWM7IGNvbG9yOiByZWJlY2NhcHVycGxlJyk7Y29uc29sZS5pbmZvKCclY1lvdSBjYW4gc3R5bGUgdGhlIG91dHB1dCcsICdmb250LXNpemU6IDIwcHgnKTtjb25zb2xlLmluZm8oJyVjY29uc29sZS5pbmZvKFwnJVxcY1lvdSBjYW4gc3R5bGUgdGhlIG91dHB1dFwnLCBcJ2ZvbnQtc2l6ZTogMjBweFwnKScsIHN0eWxlcyk7Y29uc29sZS5pbmZvKCclY1lvdVwnbGwgbmVlZCB0byByZW1vdmUgcmVwbGFjZScsIHN0eWxlcyk7Y29uc29sZS5pbmZvKCclXFxjJyk7Y29uc29sZS5pbmZvKCclY3dpdGgnLCBzdHlsZXMpO2NvbnNvbGUuaW5mbygnJWMnKTtjb25zb2xlLmluZm8oJyVjaW4gb3JkZXIgZm9yIHRoaXMgdG8gd29yaycsIHN0eWxlcyk7','O3ZhciBzdHlsZXMgPSAnY29sb3I6IGdyZWVuOyBmb250LXN0eWxlOiBpdGFsaWM7Jztjb25zb2xlLmluZm8oJ0Nvb2wgZmVhdHVyZXMgb2YgdGhlICVjY29uc29sZScsICdmb250LXN0eWxlOiBpdGFsaWM7IGNvbG9yOiByZWJlY2NhcHVycGxlJyk7Y29uc29sZS5kaXIoY29uc29sZSk7Y29uc29sZS5pbmZvKCclY2NvbnNvbGUuZGlyKGNvbnNvbGUpJywgc3R5bGVzKTs=','O3ZhciBzdHlsZXMgPSAnY29sb3I6IGdyZWVuOyBmb250LXN0eWxlOiBpdGFsaWM7Jztjb25zb2xlLmluZm8oJ0Nvb2wgZmVhdHVyZXMgb2YgdGhlICVjY29uc29sZScsICdmb250LXN0eWxlOiBpdGFsaWM7IGNvbG9yOiByZWJlY2NhcHVycGxlJyk7Y29uc29sZS5ncm91cCgpO2NvbnNvbGUuaW5mbygnJWNjb25zb2xlLmdyb3VwKCk7IGNvbnNvbGUuaW5mbyguLi4pOyBjb25zb2xlLmdyb3VwRW5kKCknLCBzdHlsZXMpO2NvbnNvbGUuZ3JvdXBFbmQoKTs=','O3ZhciBzdHlsZXMgPSAnY29sb3I6IGdyZWVuOyBmb250LXN0eWxlOiBpdGFsaWM7Jztjb25zb2xlLmluZm8oJ0Nvb2wgZmVhdHVyZXMgb2YgdGhlICVjY29uc29sZScsICdmb250LXN0eWxlOiBpdGFsaWM7IGNvbG9yOiByZWJlY2NhcHVycGxlJyk7Y29uc29sZS5pbmZvKCclY0hlcmVcJ3Mgb25lIG9mIG15IGZhdm9yaXRlczonLCBzdHlsZXMpOyBbJycsJycsJyddLmZvckVhY2goY29uc29sZS5jb3VudC5iaW5kKGNvbnNvbGUsICdBIGNvdW50JykpO2NvbnNvbGUuaW5mbygnJWNbXCdcJyxcJ1wnLFwnXCddLmZvckVhY2goY29uc29sZS5jb3VudC5iaW5kKGNvbnNvbGUsIFwnQSBjb3VudFwnKScsIHN0eWxlcyk7','O3ZhciBzdHlsZXMgPSAnY29sb3I6IGdyZWVuOyBmb250LXN0eWxlOiBpdGFsaWM7Jztjb25zb2xlLmluZm8oJ1lvdSBjYW4gY2FsbCAlY3JhbWJsZSVjIHRvIHNlZSBtb3JlIHJhbWJsaW5nIDopJywgc3R5bGVzKTs=','O2NvbnNvbGUuaW5mbygnaW4gMTk1NiBhIG1hbiBhcHBlYXJlZCBvbiB0aGUgcG9wdWxhciBUViBzaG93IFwiSVwndmUgR290IEEgU2VjcmV0XCIgd2hvIGhhZCB3aXRuZXNzZWQgXG5BYnJhaGFtIExpbmNvbG5cJ3MgYXNzYXNzaW5hdGlvbiBvbiBBcHJpbCAxNHRoLCAxODY1Jyk7','O2NvbnNvbGUuaW5mbygnVGhlIGNvcmUgTWV0ZW9yIHBhY2thZ2UgJWNXZWJBcHAlYyBoYXMgYW4gKEFUT1cpIHVuZG9jdW1lbnRlZCBmZWF0dXJlIGNhbGxlZCAlY1dlYkFwcC5cbnJhd0Nvbm5lY3RIYW5kbGVycyVjIHdpdGggd2ljaCB5b3UgY2FuIGluc3RhbGwgY29ubmVjdCBoYW5kbGVycyBiZWZvcmUgbW9zdCByb3V0ZXJzIGluc3RhbGwgdGhlaXJzLicpOw==','O2NvbnNvbGUuaW5mbygnUGF1bCB0aGUgT2N0b3B1cyB3YXMgc28gcHJlY2lzZSBpbiBoaXMgcHJlZGljdGlvbnMgZHVyaW5nIHRoZSAyMDEwIEZJRkEgV29ybGQgQ3VwIHRoYXQgaGUgXG5yZWNlaXZlZCBkZWF0aCB0aHJlYXRzIGZyb20gR2VybWFuIGZhbnMgYW5kIGhhZCB0byBiZSBvZmZlcmVkIHN0YXRlIHByb3RlY3Rpb24uXG5odHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9QYXVsX3RoZV9PY3RvcHVzJyk7','O2NvbnNvbGUubG9nKCdDb2NhLUNvbGEgaW50cm9kdWNlZCBUYWItQ2xlYXIgdG8gcnVpbiB0aGUgQ3J5c3RhbCBQZXBzaSBtYXJrZXRpbmcgY2FtcGFpZ24uIFRhYi1DbGVhciB3YXMgXG5tYXJrZXRlZCBhcyBhbiBpbmZlcmlvciBkaWV0IGRyaW5rLiBUaGlzIGNvbmZ1c2VkIGNvbnN1bWVycyBpbnRvIHRoaW5raW5nIENyeXN0YWwgUGVwc2kgd2FzIGFsc28gYW4gXG5pbmZlcmlvciBkaWV0IGRyaW5rLiBCb3RoIGRyaW5rcyBkaWVkIHdpdGhpbiA2IG1vbnRocy5cbmh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1RhYl9DbGVhciNQb3N0LWRpc2NvbnRpbnVhdGlvbicpOw==','O2NvbnNvbGUubG9nKCdBVE9XIE1ldGVvciBzdWJzY3JpcHRpb25zIGFyZSBibG9ja2luZyAoc2VydmVyLXNpZGUpLiBUaGlzIG1lYW5zIHRoYXQgaWYgeW91IHN1YnNjcmliZSB0byB0d28gXG5wdWJsaWNhdGlvbnMgYXQgdGhlIHNhbWUgdGltZSwgdGhlIHNlcnZlciB3aWxsIHdhaXQgZm9yIHRoZSBmaXJzdCBvbmUgdG8gYmUgZW50aWVybHkgcHVibGlzaGVkIGJlZm9yZSBcbnB1Ymxpc2hpbmcgdGhlIG5leHQgb25lLCcpOw==']
+
+var styles = 'color: green; font-style: italic;'
+var stuff = [
+  function () {
+
+    console.info('Cool features of the %cconsole', 'font-style: italic; color: rebeccapurple')
+    console.info('%cYou can style the output', 'font-size: 20px')
+    console.info('%cconsole.info(\'%\\cYou can style the output\', \'font-size: 20px\')', styles)
+    console.info('%cYou\'ll need to remove replace', styles)
+    console.info('%\\c')
+    console.info('%cwith', styles)
+    console.info('%c')
+    console.info('%cin order for this to work', styles)
+
+  }, function () {
+
+    console.info('Cool features of the %cconsole', 'font-style: italic; color: rebeccapurple')
+    console.dir(console)
+    console.info('%cconsole.dir(console)', styles)
+
+  }, function () {
+
+    console.info('Cool features of the %cconsole', 'font-style: italic; color: rebeccapurple')
+    console.group()
+    console.info('%cconsole.group(); console.info(...); console.groupEnd()', styles)
+    console.groupEnd()
+
+  }, function () {
+
+    console.info('Cool features of the %cconsole', 'font-style: italic; color: rebeccapurple')
+    console.info('%cHere\'s one of my favorites:', styles)
+    ; ['','',''].forEach(console.count.bind(console, 'A count'))
+    console.info('%c[\'\',\'\',\'\'].forEach(console.count.bind(console, \'A count\')', styles)
+
+  }, function () {
+
+    console.info('You can call %cramble%c to see more rambling :)', styles)
+
+  }, function () {
+
+    console.info('in 1956 a man appeared on the popular TV show \"I\'ve Got A Secret\" who had witnessed \nAbraham Lincoln\'s assassination on April 14th, 1865')
+
+  }, function () {
+
+    console.info('The core Meteor package %cWebApp%c has an (ATOW) undocumented feature called %cWebApp.\nrawConnectHandlers%c with wich you can install connect handlers before most routers install theirs.', styles)
+
+  }, function () {
+
+    console.info('Paul the Octopus was so precise in his predictions during the 2010 FIFA World Cup that he \nreceived death threats from German fans and had to be offered state protection.\nhttps://en.wikipedia.org/wiki/Paul_the_Octopus')
+
+  }, function () {
+
+    console.log('Coca-Cola introduced Tab-Clear to ruin the Crystal Pepsi marketing campaign. Tab-Clear was \nmarketed as an inferior diet drink. This confused consumers into thinking Crystal Pepsi was also an \ninferior diet drink. Both drinks died within 6 months.\nhttps://en.wikipedia.org/wiki/Tab_Clear#Post-discontinuation')
+
+  }, function () {
+
+    console.log('ATOW Meteor subscriptions are blocking (server-side). This means that if you subscribe to two \npublications at the same time, the server will wait for the first one to be entierly published before \npublishing the next one,')
+
+  }
+]
 
 ramble()
