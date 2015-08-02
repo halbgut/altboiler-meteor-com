@@ -1,6 +1,5 @@
 ramble = function ramble () {
   var i = Math.round(Math.random() * 10)
-  console.log(i)
   stuff[i]()
 }
 

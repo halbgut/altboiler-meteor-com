@@ -109,19 +109,22 @@ h1 {
   padding: 1rem;
 }
 
-.header__link:first-child:after {
+.header__delimiter {
   content: '|';
   padding: 0 1rem;
 }
 
-.header__link {
+.header__link,
+.header__delimiter {
+  display: inline;
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
 }
 
 .header__link:hover,
-.header__link:active {
+.header__link:active,
+.header__link--active {
   text-decoration: underline;
 }
 
