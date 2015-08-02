@@ -6,10 +6,6 @@ altboiler.config({
 })
 
 WebApp.rawConnectHandlers.use(function (req, res, next) {
-  if(req.url.indexOf('/without') == 0) {
-    altboiler.set({
-      showLoader: false
-    })
-  }
+  checkRenderWithout(req)
   next()
 })

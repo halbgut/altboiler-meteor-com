@@ -1,9 +1,10 @@
 mainContainer = document.getElementsByTagName('main')[0]
 header = document.getElementsByTagName('header')[0]
 
+checkRenderWithout()
+
 Tracker.autorun(function () {
   if(FlowRouter.subsReady()) {
-    console.log('Hi')
     mainContainer.removeChild(
       mainContainer.children[0]
     )
